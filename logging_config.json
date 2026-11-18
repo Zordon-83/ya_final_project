@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "disable_existing_loggers": false,
+  "handlers": {
+    "console": {"()": "core.logging.build_console_handler"},
+    "file": {"()": "core.logging.build_file_handler"}
+  },
+  "root": {"handlers": ["console", "file"], "level": "DEBUG"},
+  "loggers": {
+    "uvicorn": {"handlers": [], "level": "DEBUG", "propagate": true},
+    "uvicorn.error": {"handlers": [], "level": "DEBUG", "propagate": true},
+    "uvicorn.access": {"handlers": [], "level": "DEBUG", "propagate": true}
+  }
+}
